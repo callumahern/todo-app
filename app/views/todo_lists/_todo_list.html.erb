@@ -3,8 +3,9 @@
     <strong>Title:</strong>
     <%= todo_list.title %>
   </p>
+
   <ul>
-    <% @todo_list.todo_items.each do |todo_item| %>
+    <% todo_list.todo_items.each do |todo_item| %>  
       <li><%= todo_item.description %></li>
     <% end %>
   </ul>
