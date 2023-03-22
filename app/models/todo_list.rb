@@ -15,7 +15,7 @@ class TodoList < ApplicationRecord
   end
 
   def status
-    case percent_complete
+    case percent_complete.to_i
     when 0
       'Not started'
     when 100
@@ -25,5 +25,14 @@ class TodoList < ApplicationRecord
     end
   end
 
-
+  def badge_colour
+    case percent_complete.to_i
+    when 0
+      'dark'
+    when 100
+      'info'
+    else
+      'primary'
+    end
+  end
 end
