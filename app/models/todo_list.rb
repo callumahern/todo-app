@@ -14,5 +14,16 @@ class TodoList < ApplicationRecord
     (100 * completed_items.to_f / total_items).round(1)
   end
 
+  def status
+    case percent_complete
+    when 0
+      'Not started'
+    when 100
+      'Complete'
+    else
+      'In progress'
+    end
+  end
+
 
 end
