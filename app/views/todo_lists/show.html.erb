@@ -14,15 +14,25 @@
 
   <ul class="list-group">
     <% @todo_list.todo_items.each do |todo_item| %>
-      <li class="list-group-item">
-      <div class="d-flex justify-content-between">
-        <span><%= todo_item.description %></span>
-        <%= link_to '#', class: 'btn btn-info' do %>
-          <i class="fas fa-check" ></i>
-        <% end %>
-      </li>
+      <% if todo_item.completed? %>
+        <li class="list-group-item">
+          <div class="d-flex justify-content-between">
+            <span class="text-muted"><em><%= todo_item.description %></span></em>
+            <%= link_to '#', class: 'btn btn-dark' do %>
+              <i class="fas fa-check" ></i>
+            <% end %>
+          </div>
+        </li>
+      <% else %>
+        <li class="list-group-item">
+          <div class="d-flex justify-content-between">
+            <span><%= todo_item.description %></span>
+            <%= link_to '#', class: 'btn btn-info' do %>
+              <i class="fas fa-times" ></i>
+            <% end %>
+          </div>
+        </li>
+      <% end %>
     <% end %>
-  </div>
 </ul>
-</div>
 
