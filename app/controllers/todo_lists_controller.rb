@@ -8,7 +8,7 @@ class TodoListsController < ApplicationController
 
   # GET /todo_lists/1 or /todo_lists/1.json
   def show
-    @todo_item = @todo_list.todo_items.find(params[:id])
+    @todo_item = @todo_list.todo_items.find(params[:id]) if @todo_list.todo_items.present?
   end
 
   # GET /todo_lists/new
