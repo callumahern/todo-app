@@ -29,18 +29,14 @@
         <li class="list-group-item bg-light">
           <div class="d-flex justify-content-between">
             <span class="text-muted"><em><%= todo_item.description %></span></em>
-            <%= link_to '#', class: 'btn btn-info', data: { reflex: 'click->TodoItem#mark_incomplete', id: todo_item.id } do %>
-              <i class="fas fa-times" ></i>
-            <% end %>
+            <div>test</div>
           </div>
         </li>
       <% else %>
         <li class="list-group-item">
           <div class="d-flex justify-content-between">
             <span><%= todo_item.description %></span>
-            <%= link_to '#', class: 'btn btn-info', data: { reflex: 'click->TodoItem#mark_complete', id: todo_item.id } do %>
-              <i class="fas fa-check" ></i>
-            <% end %>
+            <div>test</div>
           </div>
         </li>
       <% end %>
