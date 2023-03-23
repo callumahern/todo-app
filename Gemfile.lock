@@ -256,7 +256,7 @@ DEPENDENCIES
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
-  stimulus_reflex (~> 3.4)
+  stimulus_reflex
   turbo-rails
   tzinfo-data
   web-console

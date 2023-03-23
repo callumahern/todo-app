@@ -9,6 +9,7 @@ import consumer from '../channels/consumer'
 import controller from '../controllers/application_controller'
 eagerLoadControllersFrom("controllers", application)
 
+
 // Lazy load controllers as they appear in the DOM (remember not to preload controllers in import map!)
 // import { lazyLoadControllersFrom } from "@hotwired/stimulus-loading"
 // lazyLoadControllersFrom("controllers", application)

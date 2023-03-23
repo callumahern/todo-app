@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class ApplicationReflex < StimulusReflex::Reflex
+class TodoItemReflex < ApplicationReflex
+  
   def mark_complete
     todo_item = TodoItem.find(element.dataset.id)
     todo_item.update(completed: true, completed_at: Time.now)
